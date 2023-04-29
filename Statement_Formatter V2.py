@@ -14,7 +14,7 @@ def space():
 
 
 # Printing some pre-assigned sentences to check that the code works as intended
-print(statement_formatter("#", "Welcome!"))
+print(statement_formatter("#", "Welcome to the Maori Quiz!"))
 space()
 print(statement_formatter("?", "Instructions"))
 space()
