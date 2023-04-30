@@ -1,23 +1,12 @@
-
-# Base version V1. Testing code without functions to see what it might look like.
-# Created by James Renner.
-
-# Making a random number, then printing the corresponding list no.
-
-
 import random
-E_NUMBERS = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"]
-NUMBERS = ["tahi", "rua", "toru", "wha", "iwa", "ono", "whetu", "waru", "iwa", "tekau"]
-rand_num = random.randint(0,9)
-question = input(f"What is {rand_num} in Maori?")
-print(NUMBERS[rand_num])
-answer =
 
+NUMBERS = [["tahi", "one"], ["rua", "two"], ["toru", "three"], ["wha", "four"], ["rima", "five"], ["ono", "six"],
+           ["whitu", "seven"], ["waru", "eight"], ["iwa", "nine"], ["tekau", "ten"]]
+random.shuffle(NUMBERS)
 
-if question == answer:
-    print("Yay! you got it right!")
-else:
-    print("incorrect :( you'll get it next time")
-    print(question)
-
-
+for i in NUMBERS:
+    question = input(f"What is {i[1]} in Maori? ")
+    if question == i[0]:
+        print("Correct answer!")
+    else:
+        print("Incorrect :( The correct answer is", i[0])
