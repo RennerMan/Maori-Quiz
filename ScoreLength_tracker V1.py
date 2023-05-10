@@ -1,4 +1,4 @@
-# Component 5: Score Tracker V1-Keeps track of the player's score and length
+# Component 5: Score/Length Tracker V1-Keeps track of the player's score and length
 
 
 import random
