@@ -10,7 +10,7 @@ NUMBERS = [["toru", "three"]]
 random.shuffle(NUMBERS)
 # Selects the english half of the list and asks what the english word of the list is in Maori
 
-score = 0
+
 
 
 def scorelength():
@@ -23,8 +23,10 @@ def scorelength():
             if question == i[0].lower().split():
                 print("Correct answer!")
                 score += 1
+                return score
             else:
                 print("Incorrect! You'll get it next time!")
+test = scorelength()
 
-print(scorelength())
-print(f"Game Over! You got {score}/10 questions right!")
+
+print(f"Game Over! You got {test}/10 questions right!")

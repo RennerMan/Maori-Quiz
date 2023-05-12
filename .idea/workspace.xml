@@ -34,7 +34,7 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.ScoreLength_tracker V2">
-    <configuration name="Quiz_Questions V1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Final_Version" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Maori Quiz" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -46,7 +46,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Quiz_Questions V1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Final_Version.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -163,10 +163,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.ScoreLength_tracker V2" />
+        <item itemvalue="Python.Final_Version" />
         <item itemvalue="Python.ScoreLength_tracker V1" />
         <item itemvalue="Python.Quiz_Questions V3" />
         <item itemvalue="Python.Quiz_Questions V2" />
-        <item itemvalue="Python.Quiz_Questions V1" />
       </list>
     </recent_temporary>
   </component>
@@ -180,5 +180,16 @@
       <updated>1682551297758</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ScoreLength_tracker V2.py</url>
+          <line>15</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
