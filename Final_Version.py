@@ -1,8 +1,9 @@
 import random
 
 # A list of Maori and their corresponding English numbers
-NUMBERS = [["tahi", "one"], ["rua", "two"], ["toru", "three"], ["wha", "four"], ["rima", "five"], ["ono", "six"],
-           ["whitu", "seven"], ["waru", "eight"], ["iwa", "nine"], ["tekau", "ten"]]
+NUMBERS = [["tahi", "one"], ["rua", "two"], ["toru", "three"], ["wha", "four"],
+           ["rima", "five"], ["ono", "six"], ["whitu", "seven"],
+           ["waru", "eight"], ["iwa", "nine"], ["tekau", "ten"]]
 
 random.shuffle(NUMBERS)
 
@@ -40,7 +41,8 @@ def age_finder():
 def played_before():
     print(statement_formatter("#", "Welcome to the Maori Quiz!"))
     print()
-    reply = input("Have you done this quiz before? (Please answer yes or no)").lower()
+    reply = input("Have you done this quiz before?\
+    (Please answer yes or no)").lower()
     if reply == "yes" or reply == "y":
         print("Nice! We'll send you straight into the quiz")
         return "yes"
@@ -53,9 +55,10 @@ def played_before():
         print("Try your best, we will show you how many questions\
  you got right out of 10")
         print()
-        print(statement_formatter("?", "Good Luck"))
+        print(statement_formatter("!", "Good Luck"))
         print()
-        print(statement_formatter("@", "Quiz Time"))
+        print(statement_formatter("#n"
+                                  "", "Quiz Time"))
         return "no"
     # Checking to make sure user provides a suitable response
     else:
@@ -66,23 +69,10 @@ response = played_before()
 
 
 # My Quiz Questions V3 Function
-
+# Combined with my score and length variables
 
 def questions():
-    for i in NUMBERS:
-        question = input(f"What is {i[1]} in Maori?").lower().split()
-        if question == i[0].lower().split():
-            print("Correct answer!")
-        else:
-            print("Incorrect! You'll get it next time!")
-
-
-# My Score/Length tracker V2 Function
-
-score = 0
-
-
-def scorelength():
+    # Defining the length and score variables
     length = 0
     score = 0
     while length != 10:
@@ -90,11 +80,12 @@ def scorelength():
             question = input(f"What is {i[1]} in Maori?").lower().split()
             length += 1
             if question == i[0].lower().split():
-                print(statement_formatter("!","Correct answer!"))
+                print(statement_formatter("!", "Correct Answer!"))
                 score += 1
             else:
                 print("Incorrect! You'll get it next time!")
+    return score
 
 
-print(scorelength())
-print(f"Game Over!\n You got {score}/10 questions right!")
+test = questions()
+print(statement_formatter("-", f"Game Over! You got {test}/10 questions right!"))

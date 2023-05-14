@@ -33,7 +33,7 @@
       <recent name="C:\Users\jdjre\OneDrive - Middleton Grange School\2023\DTC\AS 1.7 Programming\Excersizes\Github\Maori Quiz" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.ScoreLength_tracker V2">
+  <component name="RunManager" selected="Python.Final_Version">
     <configuration name="Final_Version" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Maori Quiz" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -162,8 +162,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.ScoreLength_tracker V2" />
         <item itemvalue="Python.Final_Version" />
+        <item itemvalue="Python.ScoreLength_tracker V2" />
         <item itemvalue="Python.ScoreLength_tracker V1" />
         <item itemvalue="Python.Quiz_Questions V3" />
         <item itemvalue="Python.Quiz_Questions V2" />
@@ -180,16 +180,5 @@
       <updated>1682551297758</updated>
     </task>
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/ScoreLength_tracker V2.py</url>
-          <line>15</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
