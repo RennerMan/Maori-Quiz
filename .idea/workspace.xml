@@ -55,7 +55,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Quiz_Questions V2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Player_details V3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Maori Quiz" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -67,7 +67,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Quiz_Questions V2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Player_details V3.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -163,10 +163,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.Final_Version" />
+        <item itemvalue="Python.Player_details V3" />
         <item itemvalue="Python.ScoreLength_tracker V2" />
         <item itemvalue="Python.ScoreLength_tracker V1" />
         <item itemvalue="Python.Quiz_Questions V3" />
-        <item itemvalue="Python.Quiz_Questions V2" />
       </list>
     </recent_temporary>
   </component>

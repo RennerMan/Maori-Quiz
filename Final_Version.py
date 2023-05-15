@@ -23,41 +23,43 @@ def statement_formatter(symbol, statement):
     return f" {bottom_top}\n {formatted_statement}\n {bottom_top}"
 
 
-# My Player Details V3 Functions
+# My Player Details V3 Function
 
 
-def name_finder():
+def name_age():
     name = input("What is your name?")
-    return name
-
-
-def age_finder():
-    name = name_finder()
-    age = int(input(f"Hi {name}, what is your age?"))
+    age = int(input(f"Hi, what is your age?"))
     # Checks they are the right age
     if 9 <= age <= 12:
         print("You are around the right age for the quiz!")
     else:
         print("You might not be the right age for this quiz.")
         print("You can still take it though!")
-    return age
+    return name
 
 
-# My Instructions V3 Function (With instructions this time)
+# Prints the name finder and the age finder
 
+
+# My Instructions V3 Function (With instructions and this time)
+# Welcomes player to quiz with their name to make it feel more personal
 
 def played_before():
-    print(statement_formatter("#", "Welcome to the Maori Quiz!"))
+    print(statement_formatter("#", f"Hi {name_age()},\
+ Welcome to the Maori Quiz!"))
     print()
     reply = input("Have you done this quiz before?\
     (Please answer yes or no)").lower()
-    if reply == "yes" or reply == "y":
-        print("Nice! We'll send you straight into the quiz")
-        return "yes"
-    elif reply == "no" or reply == "n":
-        print(statement_formatter("?", "Instructions"))
-        print()
-        print("You will be given 10 random questions\
+# Creates a loop to check the reply is valid
+    while reply != "yes" or "y" or "no" or "n":
+        if reply == "yes" or reply == "y":
+            print("Nice! We'll send you straight into the quiz")
+            print(statement_formatter("#", "Quiz Time"))
+            return "yes"
+        elif reply == "no" or reply == "n":
+            print(statement_formatter("?", "Instructions"))
+            print()
+            print("You will be given 10 random questions\
  about Maori Numbers up to 10")
         print()
         print("Try your best, we will show you how many questions\
@@ -65,8 +67,7 @@ def played_before():
         print()
         print(statement_formatter("!", "Good Luck"))
         print()
-        print(statement_formatter("#n"
-                                  "", "Quiz Time"))
+        print(statement_formatter("#", "Quiz Time"))
         return "no"
     # Checking to make sure user provides a suitable response
     else:
@@ -92,8 +93,10 @@ def questions():
                 print(statement_formatter("!", "Correct Answer!"))
                 score += 1
             else:
-                print("Incorrect! You'll get it next time!")
+                print(f"Incorrect! You'll get it next time!")
     return score
+
+# Getting the score variable outside the questions function
 
 
 test = questions()
