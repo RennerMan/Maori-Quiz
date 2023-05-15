@@ -1,6 +1,8 @@
 import random
 
 # A list of Maori and their corresponding English numbers
+
+
 NUMBERS = [["tahi", "one"], ["rua", "two"], ["toru", "three"], ["wha", "four"],
            ["rima", "five"], ["ono", "six"], ["whitu", "seven"],
            ["waru", "eight"], ["iwa", "nine"], ["tekau", "ten"]]
@@ -9,6 +11,8 @@ random.shuffle(NUMBERS)
 
 
 # My Statement Formatter V3 Function
+
+
 def statement_formatter(symbol, statement):
     # Putting the symbol around the sides of the text twice
     sides = symbol * 2
@@ -20,6 +24,8 @@ def statement_formatter(symbol, statement):
 
 
 # My Player Details V3 Functions
+
+
 def name_finder():
     name = input("What is your name?")
     return name
@@ -38,6 +44,8 @@ def age_finder():
 
 
 # My Instructions V3 Function (With instructions this time)
+
+
 def played_before():
     print(statement_formatter("#", "Welcome to the Maori Quiz!"))
     print()
@@ -71,6 +79,7 @@ response = played_before()
 # My Quiz Questions V3 Function
 # Combined with my score and length variables
 
+
 def questions():
     # Defining the length and score variables
     length = 0
@@ -88,4 +97,5 @@ def questions():
 
 
 test = questions()
-print(statement_formatter("-", f"Game Over! You got {test}/10 questions right!"))
+print(statement_formatter("-", f"Game Over!\
+You got {test}/10 questions right!"))
