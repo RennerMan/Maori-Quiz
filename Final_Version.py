@@ -28,7 +28,15 @@ def statement_formatter(symbol, statement):
 
 def name_age():
     name = input("What is your name?")
-    age = int(input(f"Hi, what is your age?"))
+    while True:
+        # Keeps trying an age until it receives a valid age
+        try:
+            age = int(input(f"Hi {name}, what is your age?"))
+            # If the age is valid, it breaks the loop
+            break
+        # If it isn't, it tells the player it wasn't valid.
+        except ValueError:
+            print("<error> Please enter a valid integer")
     # Checks they are the right age
     if 9 <= age <= 12:
         print("You are around the right age for the quiz!")
@@ -38,28 +46,24 @@ def name_age():
     return name
 
 
-# Prints the name finder and the age finder
-
-
 # My Instructions V3 Function (With instructions and this time)
 # Welcomes player to quiz with their name to make it feel more personal
 
 def played_before():
-    print(statement_formatter("#", f"Hi {name_age()},\
+    print(statement_formatter("#", f"{name_age()},\
  Welcome to the Maori Quiz!"))
     print()
     reply = input("Have you done this quiz before?\
     (Please answer yes or no)").lower()
-# Creates a loop to check the reply is valid
-    while reply != "yes" or "y" or "no" or "n":
-        if reply == "yes" or reply == "y":
-            print("Nice! We'll send you straight into the quiz")
-            print(statement_formatter("#", "Quiz Time"))
-            return "yes"
-        elif reply == "no" or reply == "n":
-            print(statement_formatter("?", "Instructions"))
-            print()
-            print("You will be given 10 random questions\
+    # Creates a loop to check the reply is valid
+    if reply == "yes" or reply == "y":
+        print("Nice! We'll send you straight into the quiz")
+        print(statement_formatter("#", "Quiz Time"))
+        return "yes"
+    elif reply == "no" or reply == "n":
+        print(statement_formatter("?", "Instructions"))
+        print()
+        print("You will be given 10 random questions\
  about Maori Numbers up to 10")
         print()
         print("Try your best, we will show you how many questions\
@@ -72,6 +76,7 @@ def played_before():
     # Checking to make sure user provides a suitable response
     else:
         print("Please answer either 'yes' or 'no'")
+        print(reply)
 
 
 response = played_before()
@@ -95,6 +100,7 @@ def questions():
             else:
                 print(f"Incorrect! You'll get it next time!")
     return score
+
 
 # Getting the score variable outside the questions function
 
