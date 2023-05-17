@@ -1,6 +1,6 @@
 import random
 
-# A list of Maori and their corresponding English numbers
+# A 2-dimensional list of Maori and their corresponding English numbers
 
 
 NUMBERS = [["tahi", "one"], ["rua", "two"], ["toru", "three"], ["wha", "four"],
@@ -49,34 +49,36 @@ def name_age():
 # My Instructions V3 Function (With instructions and this time)
 # Welcomes player to quiz with their name to make it feel more personal
 
+
 def played_before():
     print(statement_formatter("#", f"{name_age()},\
  Welcome to the Maori Quiz!"))
     print()
-    reply = input("Have you done this quiz before?\
+    reply = ""
+    while reply != "yes" or "no":
+        reply = input("Have you done this quiz before?\
     (Please answer yes or no)").lower()
     # Creates a loop to check the reply is valid
-    if reply == "yes" or reply == "y":
-        print("Nice! We'll send you straight into the quiz")
-        print(statement_formatter("#", "Quiz Time"))
-        return "yes"
-    elif reply == "no" or reply == "n":
-        print(statement_formatter("?", "Instructions"))
-        print()
-        print("You will be given 10 random questions\
+        if reply == "yes" or reply == "y":
+            print("Nice! We'll send you straight into the quiz")
+            print(statement_formatter("#", "Quiz Time"))
+            return "yes"
+        elif reply == "no" or reply == "n":
+            print(statement_formatter("?", "Instructions"))
+            print()
+            print("You will be given 10 random questions\
  about Maori Numbers up to 10")
-        print()
-        print("Try your best, we will show you how many questions\
+            print()
+            print("Try your best, we will show you how many questions\
  you got right out of 10")
-        print()
-        print(statement_formatter("!", "Good Luck"))
-        print()
-        print(statement_formatter("#", "Quiz Time"))
-        return "no"
+            print()
+            print(statement_formatter("!", "Good Luck"))
+            print()
+            print(statement_formatter("#", "Quiz Time"))
+            return "no"
     # Checking to make sure user provides a suitable response
-    else:
-        print("Please answer either 'yes' or 'no'")
-        print(reply)
+        else:
+            print("Please answer either 'yes' or 'no'")
 
 
 response = played_before()
