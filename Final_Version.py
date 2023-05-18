@@ -57,13 +57,13 @@ def played_before():
     reply = ""
     while reply != "yes" or "no":
         reply = input("Have you done this quiz before?\
-    (Please answer yes or no)").lower()
+    (Please answer yes or no)").lower().split()
     # Creates a loop to check the reply is valid
-        if reply == "yes" or reply == "y":
+        if reply == "yes" or reply == "y".split():
             print("Nice! We'll send you straight into the quiz")
             print(statement_formatter("#", "Quiz Time"))
             return "yes"
-        elif reply == "no" or reply == "n":
+        elif reply == "no" or reply == "n".split():
             print(statement_formatter("?", "Instructions"))
             print()
             print("You will be given 10 random questions\
