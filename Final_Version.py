@@ -50,9 +50,9 @@ def name_age():
                         print("<error> Please enter a valid integer")
             # If the name isn't valid, it loops back until it is
             else:
-                print("<error> Please enter a valid text")
+                print("<error> Please enter a valid name")
         except ValueError:
-            print("<error> Please enter a valid text")
+            print("<error> Please enter a valid name")
 
 
 # My Instructions V3 Function (With instructions this time)
