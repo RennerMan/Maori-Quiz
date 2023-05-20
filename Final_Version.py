@@ -24,6 +24,8 @@ def statement_formatter(symbol, statement):
 
 
 # My Player Details V3 Function
+# Now checks to see if the name is valid
+# Rearranged the code to make more sense
 
 
 def name_age():
@@ -34,25 +36,26 @@ def name_age():
             # Creates a loop to check the name is valid
             if name.isalpha():
                 # If the name is valid, it asks the player's age
-                age = int(input(f"Hi {name}, what is your age?"))
-                # If it is, it breaks the loop
-                break
-                # If it isn't, it shows an error message and loops back
+                while True:
+                    try:
+                        # Loops until the age is valid
+                        age = int(input(f"Hi {name}, what is your age?"))
+                        if 9 <= age <= 12:
+                            print("You are around the right age for the quiz!")
+                        else:
+                            print("You might not be the right age for this quiz.")
+                            print("You can still take it though!")
+                        return name  # Exit the function if both name and age are valid
+                    except ValueError:
+                        print("<error> Please enter a valid integer")
+            # If the name isn't valid, it loops back until it is
             else:
                 print("<error> Please enter a valid text")
-                # Checks the age is valid
         except ValueError:
-            print("<error> Please enter a valid integer")
-            # Checks to see if the age is between 9 & 12
-    if 9 <= age <= 12:
-        print("You are around the right age for the quiz!")
-    else:
-        print("You might not be the right age for this quiz.")
-        print("You can still take it though!")
-    return name
+            print("<error> Please enter a valid text")
 
 
-# My Instructions V3 Function (With instructions and this time)
+# My Instructions V3 Function (With instructions this time)
 # Welcomes player to quiz with their name to make it feel more personal
 
 
@@ -151,3 +154,7 @@ test = questions()
 # Tells the player how many questions they got correct out of ten
 print(statement_formatter("-", f"Game Over!\
 You got {test}/10 questions right!"))
+print()
+print("For revision, these are the maori numbers up to 10:")
+print()
+print("Tahi, Rua, Toru, Wha, Rima, Ono, Whitu, Waru, Iwa, Tekau")
