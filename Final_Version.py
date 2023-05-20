@@ -100,7 +100,8 @@ def questions():
                 print(statement_formatter("!", "Correct Answer!"))
                 score += 1
             else:
-                print(f"Incorrect! You'll get it next time!")
+                print(f"Incorrect! It was {i[0]}!\
+ You'll get it next time!")
     return score
 
 
