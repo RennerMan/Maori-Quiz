@@ -3,9 +3,10 @@ import random
 # A 2-dimensional list of Maori and their corresponding English numbers
 
 
-NUMBERS = [["tahi", "one"], ["rua", "two"], ["toru", "three"], ["wha", "four"],
-           ["rima", "five"], ["ono", "six"], ["whitu", "seven"],
-           ["waru", "eight"], ["iwa", "nine"], ["tekau", "ten"]]
+NUMBERS = [["tahi", "one"], ["rua", "two"], ["toru", "three"],
+           ["wha", "four"], ["rima", "five"], ["ono", "six"],
+           ["whitu", "seven"], ["waru", "eight"], ["iwa", "nine"],
+           ["tekau", "ten"]]
 
 random.shuffle(NUMBERS)
 
@@ -41,11 +42,14 @@ def name_age():
                         # Loops until the age is valid
                         age = int(input(f"Hi {name}, what is your age?"))
                         if 9 <= age <= 12:
-                            print("You are around the right age for the quiz!")
+                            print("You are around the right age\
+                             for the quiz!")
                         else:
-                            print("You might not be the right age for this quiz.")
+                            print("You might not be\
+                             the right age for this quiz.")
                             print("You can still take it though!")
-                        return name  # Exit the function if both name and age are valid
+                        return name
+                        # Exit the function if both name and age are valid
                     except ValueError:
                         print("<error> Please enter a valid integer")
             # If the name isn't valid, it loops back until it is
@@ -94,12 +98,15 @@ response = played_before()
 
 
 def played_before():
-    print(statement_formatter("#", f"{name_age()}, Welcome to the Maori Quiz!"))
+    print(statement_formatter("#", f"{name_age()},\
+     Welcome to the Maori Quiz!"))
     print()
     reply = ""
     while reply != "yes" or reply != "y" or reply != "no" or reply != "n":
-        reply = input("Have you done this quiz before? (Please answer yes or no)")
-        reply = reply.lower().strip()  # Convert the input to lowercase and remove leading/trailing spaces
+        reply = input("Have you done this quiz before?\
+         (Please answer yes or no)")
+        # Convert the input to lowercase and remove leading/trailing spaces
+        reply = reply.lower().strip()
         # Creates a loop to check the reply is valid
         if reply == "yes" or reply == "y":
             print("Nice! We'll send you straight into the quiz")
@@ -108,9 +115,11 @@ def played_before():
         elif reply == "no" or reply == "n":
             print(statement_formatter("?", "Instructions"))
             print()
-            print("You will be given 10 random questions about Maori Numbers up to 10")
+            print("You will be given 10 random questions\
+             about Maori Numbers up to 10")
             print()
-            print("Try your best, we will show you how many questions you got right out of 10")
+            print("Try your best, we will show you\
+             how many questions you got right out of 10")
             print()
             print(statement_formatter("!", "Good Luck"))
             print()
